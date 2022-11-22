@@ -1,10 +1,11 @@
 const express = require("express");
+// controller functions
 const {
-   getAllHabits,
-   getSingleHabit,
-   createNewHabit,
-   deleteAHabit,
-   updateAHabit,
+  getAllHabits,
+  getSingleHabit,
+  createNewHabit,
+  deleteAHabit,
+  updateAHabit,
 } = require("../controllers/habitController");
 
 const router = express.Router();
