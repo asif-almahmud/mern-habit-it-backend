@@ -1,11 +1,22 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const habitRoutes = require("./routes/habits");
 const userRoutes = require("./routes/user");
 
 //-> express app
 const app = express();
+
+const corsOptions = {
+  origin: "http://localhost:3000",
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  // methods:["GET", "POST", "PUT", "PATCH", "DELETE"],
+  credentials: true,
+};
+
+//-> enable cors
+app.use(cors(corsOptions));
 
 //-> setting the PORT
 const PORT = process.env.PORT || 4000; // if the place we would deploy it would have a PORT number saved in the environment variables then it would grab that, otherwise we're going to run it here locally at PORT 4000

@@ -7,8 +7,12 @@ const {
   deleteAHabit,
   updateAHabit,
 } = require("../controllers/habitController");
+const requireAuth = require("../middleware/requireAuth");
 
+// require authentication for all habitit routes
 const router = express.Router();
+
+router.use(requireAuth);
 
 //-> GET all habits
 router.get("/", getAllHabits);
