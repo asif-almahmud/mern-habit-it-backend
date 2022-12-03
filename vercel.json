@@ -7,6 +7,27 @@
     }
   ],
 
+  "controllers": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+
+  "middleware": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+
+  "models": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+
   "routes": [
     {
       "src": "/(.*)",
